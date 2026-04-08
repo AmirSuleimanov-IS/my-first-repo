@@ -32,6 +32,7 @@ func (h *Handler) loadTemplates() {
 	
 	// Затем основные страницы
 	pageFiles := []string{
+		"templates/home.html",
 		"templates/athletes.html",
 		"templates/events.html",
 		"templates/athlete-detail.html",
@@ -149,5 +150,10 @@ func (h *Handler) TeamApplicationHandler(w http.ResponseWriter, r *http.Request)
 }
 
 func (h *Handler) HomeHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/athletes", http.StatusSeeOther)
+	data := map[string]interface{}{
+		"CartCount": h.repo.TeamApplication.TotalMembers,
+		"PageTitle": "Главная",
+	}
+	
+	h.tmpl.ExecuteTemplate(w, "home", data)
 }

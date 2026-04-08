@@ -37,7 +37,7 @@ func (r *Repository) initAthletes() {
 		Rating:   4,
 		Bio:      "Алексей — один из самых перспективных ультрамарафонцев страны. Специализируется на технически сложных горных маршрутах с большим набором высоты.",
 		Location: "Красная Поляна, Сочи",
-		ImageKey: "athlete-volkov.jpg",
+		ImageKey: "1.png",
 	}
 
 	r.Athletes["2"] = models.Athlete{
@@ -51,7 +51,7 @@ func (r *Repository) initAthletes() {
 		Wins:     12,
 		Rating:   6,
 		Location: "Москва",
-		ImageKey: "athlete-sokolov.jpg",
+		ImageKey: "2.png",
 	}
 
 	r.Athletes["3"] = models.Athlete{
@@ -65,7 +65,7 @@ func (r *Repository) initAthletes() {
 		Wins:     10,
 		Rating:   5,
 		Location: "Санкт-Петербург",
-		ImageKey: "athlete-m-volkov.jpg",
+		ImageKey: "3.png",
 	}
 
 	r.Athletes["4"] = models.Athlete{
@@ -79,7 +79,7 @@ func (r *Repository) initAthletes() {
 		Wins:     5,
 		Rating:   3,
 		Location: "Казань",
-		ImageKey: "athlete-morozova.jpg",
+		ImageKey: "4.png",
 	}
 
 	r.Athletes["5"] = models.Athlete{
@@ -93,7 +93,7 @@ func (r *Repository) initAthletes() {
 		Wins:     8,
 		Rating:   4,
 		Location: "Екатеринбург",
-		ImageKey: "athlete-petrov.jpg",
+		ImageKey: "5.png",
 	}
 }
 
@@ -106,7 +106,7 @@ func (r *Repository) initEvents() {
 		Location:    "Москва",
 		Price:       2500.00,
 		Description: "Ежегодный городской марафон с дистанциями 42км, 21км, 10км и 5км.",
-		ImageKey:    "event-marathon.jpg",
+		ImageKey:    "6.png",
 		VideoKey:    "marathon-promo.mp4",
 	}
 
@@ -118,7 +118,7 @@ func (r *Repository) initEvents() {
 		Location:    "Сочи",
 		Price:       15000.00,
 		Description: "Полный триатлон: плавание 3.8км, велогонка 180км, бег 42км.",
-		ImageKey:    "event-triathlon.jpg",
+		ImageKey:    "6.png",
 		VideoKey:    "triathlon-promo.mp4",
 	}
 
@@ -130,7 +130,7 @@ func (r *Repository) initEvents() {
 		Location:    "Приэльбрусье",
 		Price:       8000.00,
 		Description: "Горный трейл с набором высоты 2500м. Дистанции 50км и 30км.",
-		ImageKey:    "event-trail.jpg",
+		ImageKey:    "6.png",
 		VideoKey:    "trail-promo.mp4",
 	}
 
@@ -142,7 +142,7 @@ func (r *Repository) initEvents() {
 		Location:    "Москва",
 		Price:       5000.00,
 		Description: "Массовая велогонка на 100км и 50км по закрытым трассам.",
-		ImageKey:    "event-cycling.jpg",
+		ImageKey:    "6.png",
 		VideoKey:    "cycling-promo.mp4",
 	}
 }
@@ -163,7 +163,7 @@ func (r *Repository) initTeamApplication() {
 				Role:      "Капитан команды",
 				EventID:   "1",
 				EventType: "Марафон",
-				ImageKey:  "athlete-sokolov.jpg",
+				ImageKey:  "2.png",
 			},
 			{
 				AthleteID: "3",
@@ -171,7 +171,7 @@ func (r *Repository) initTeamApplication() {
 				Role:      "Участник",
 				EventID:   "2",
 				EventType: "Триатлон",
-				ImageKey:  "athlete-m-volkov.jpg",
+				ImageKey:  "3.png",
 			},
 			{
 				AthleteID: "4",
@@ -179,7 +179,7 @@ func (r *Repository) initTeamApplication() {
 				Role:      "Участник",
 				EventID:   "3",
 				EventType: "Трейл",
-				ImageKey:  "athlete-morozova.jpg",
+				ImageKey:  "4.png",
 			},
 		},
 	}

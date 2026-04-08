@@ -1,0 +1,16 @@
+```
+# Compiled and build artifacts
+main
+*.o
+*.obj
+*.out
+
+# Dependencies
+go.sum
+
+# Logs and temp files
+*.log
+
+# Docker
+.dockerignore
+```

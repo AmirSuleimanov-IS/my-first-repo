@@ -1,16 +1,15 @@
 ```
 # Compiled and build artifacts
-main
 *.o
 *.obj
 *.out
-
 # Dependencies
-go.sum
-
+vendor/
 # Logs and temp files
 *.log
-
-# Docker
-.dockerignore
+*.tmp
+# Environment
+.env
+.env.local
+*.env.*
 ```

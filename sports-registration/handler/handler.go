@@ -23,7 +23,24 @@ func (h *Handler) loadTemplates() {
 	funcs := template.FuncMap{
 		"eq": func(a, b string) bool { return a == b },
 	}
-	h.tmpl = template.Must(template.New("").Funcs(funcs).ParseGlob("templates/**/*.html"))
+	
+	// Сначала загружаем layout шаблоны
+	layoutFiles := []string{
+		"templates/layout/header.html",
+		"templates/layout/footer.html",
+	}
+	
+	// Затем основные страницы
+	pageFiles := []string{
+		"templates/athletes.html",
+		"templates/events.html",
+		"templates/athlete-detail.html",
+		"templates/event-detail.html",
+		"templates/team-application.html",
+	}
+	
+	allFiles := append(layoutFiles, pageFiles...)
+	h.tmpl = template.Must(template.New("").Funcs(funcs).ParseFiles(allFiles...))
 }
 
 func (h *Handler) AthletesHandler(w http.ResponseWriter, r *http.Request) {

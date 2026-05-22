@@ -1,5 +1,10 @@
 ```
-# Compiled and build artifacts
+# Binaries
+*
+*.exe
+*.dll
+*.so
+*.a
 *.o
 *.obj
 *.out
@@ -7,9 +12,10 @@
 # Dependencies
 vendor/
 
-# Logs and temp files
-*.log
-*.tmp
+# Build artifacts
+build/
+dist/
+target/
 
 # Environment
 .env
@@ -19,4 +25,16 @@ vendor/
 # Editors
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
 ```

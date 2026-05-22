@@ -3,6 +3,7 @@ package handler
 import (
 	"html/template"
 	"net/http"
+	"path/filepath"
 	"sports-registration/models"
 	"sports-registration/repository"
 	"strings"
@@ -24,20 +25,26 @@ func (h *Handler) loadTemplates() {
 		"eq": func(a, b string) bool { return a == b },
 	}
 	
+	// Получаем абсолютные пути к шаблонам
+	baseDir, err := filepath.Abs("templates")
+	if err != nil {
+		panic(err)
+	}
+	
 	// Сначала загружаем layout шаблоны
 	layoutFiles := []string{
-		"templates/layout/header.html",
-		"templates/layout/footer.html",
+		filepath.Join(baseDir, "layout", "header.html"),
+		filepath.Join(baseDir, "layout", "footer.html"),
 	}
 	
 	// Затем основные страницы
 	pageFiles := []string{
-		"templates/home.html",
-		"templates/athletes.html",
-		"templates/events.html",
-		"templates/athlete-detail.html",
-		"templates/event-detail.html",
-		"templates/team-application.html",
+		filepath.Join(baseDir, "home.html"),
+		filepath.Join(baseDir, "athletes.html"),
+		filepath.Join(baseDir, "events.html"),
+		filepath.Join(baseDir, "athlete-detail.html"),
+		filepath.Join(baseDir, "event-detail.html"),
+		filepath.Join(baseDir, "team-application.html"),
 	}
 	
 	allFiles := append(layoutFiles, pageFiles...)
